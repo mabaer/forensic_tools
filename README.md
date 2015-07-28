@@ -2,4 +2,4 @@
 A small collection of some forensic tools written in python.
 
 
-The code may contain errors or bugs.
+(The code can contain errors or bugs)
