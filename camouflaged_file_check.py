@@ -22,7 +22,7 @@ def compareMimeExt(file, mime, ext, mimefiletxt):
 		pos = mimefiletxt.find(mime, end)
 	# Check all extensions
 	for e in possibleExt:
-		if e == ext:
+		if e.lower() == ext.lower():
 			# Return if correct extension was found
 			return
 	# Print warning for camouflaged file
@@ -52,7 +52,7 @@ def checkDirectory(currentDir, mimefiletxt):
 def main():
     global mimefile
     if len (sys.argv) != 3 and len (sys.argv) != 2 :
-        print "Use as arguments DIR [MIME_FILE]"
+        print "Use as arguments DIR [MIME_FILE]\n For instance \"python camouflage_checker.py ~/suspects/app/res/ ~/softs/apk_optim_mime.types\""
             sys.exit (1)
     #Check if user wants to use a different mime file
     if len(sys.argv) == 3 :
